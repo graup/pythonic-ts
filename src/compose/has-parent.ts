@@ -1,9 +1,11 @@
-import type { Nullable, Predicate } from './utils/types';
+import type { Nullable, Predicate } from '../utils/types';
 
 /**
  * A node that has a parent, allowing reverse traversal
  */
-export interface HasParent<N> { parent: Nullable<N>; }
+export interface HasParent<N> {
+  parent: Nullable<N>;
+}
 
 /**
  * Iterate nodes upwards, i.e. by parent

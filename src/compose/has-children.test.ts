@@ -1,6 +1,9 @@
 
-import { Tree, treeIterator, treeFind } from './tree';
-import { KeyedNode } from './keyed-node';
+import {  MaybeHasChildren, treeIterator, treeFind } from './has-children';
+import { HasKey } from './has-key';
+import { Tree } from '../tree';
+
+export type KeyedNode<Data = unknown, Key = string> = HasKey<Key> & MaybeHasChildren<KeyedNode<Data>> & { data?: Data };
 
 const tree = new Tree<KeyedNode<{ value: number }>>({
   key: '1',

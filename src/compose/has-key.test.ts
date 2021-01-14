@@ -1,11 +1,13 @@
 import dedent from 'dedent';
 
-import { treeIterator } from './tree';
-import { KeyedNode, prettyPrint } from './keyed-node';
+import { MaybeHasChildren, treeIterator } from './has-children';
+import { HasKey, prettyPrint } from './has-key';
+
+type Node = HasKey<number> & MaybeHasChildren<Node>;
 
 describe('KeyedNode', () => {
   it('should iterate', () => {
-    const tree: KeyedNode<unknown, number> = {
+    const tree: Node = {
       key: 1,
       children: [
         { key: 2, children: [ null, { key: 3 }] },
@@ -16,7 +18,7 @@ describe('KeyedNode', () => {
     expect(iteratedKeys).toStrictEqual([1, 2, 3, 4]);
   });
   it('should pretty print', () => {
-    const tree: KeyedNode<unknown, number> = {
+    const tree: Node = {
       key: 1,
       children: [
         { key: 2 },
@@ -29,9 +31,9 @@ describe('KeyedNode', () => {
         ↳ 2
         ↳ 3`);
     expect(prettyPrint(tree, true)).toBe(dedent`
-    ↳ 1
-      ↳ 2
-      ↳ 3
-      ↳ ()`);
+      ↳ 1
+        ↳ 2
+        ↳ 3
+        ↳ ()`);
   });
 });

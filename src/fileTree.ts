@@ -1,24 +1,27 @@
-
-
 /**
  * A file tree is a tree whose nodes are path segments.
  * This makes search more efficient.
  */
+
+import { MaybeHasChildren, HasKey, KeyedDataNode } from './compose';
 import { Tree } from './tree';
 import { basename, splitPath } from './utils/path';
 import { iterateNonNull } from './utils/iterators';
-import { KeyedNode } from './keyed-node';
 
-type PathMatchFn<Node extends KeyedNode = KeyedNode> = (subPath: string, node: Node) => boolean;
-const defaultPathMatch: PathMatchFn = (subPath, node) => node.key === subPath;
+export type FileTreeNode<D> = KeyedDataNode<D, string>;
+
+type PathMatchFn<Node extends HasKey<string>> = (subPath: string, node: Node) => boolean;
+function defaultPathMatch<Node extends HasKey<string>>(subPath: string, node: Node) {
+  return node.key === subPath;
+}
 
 /**
  * Find node matching path
  */
-export function treeFindPath<Node extends KeyedNode>(
+export function treeFindPath<Node extends HasKey<string> & MaybeHasChildren<Node>>(
   tree: Node,
   keyPath: string[],
-  pathMatch: PathMatchFn = defaultPathMatch,
+  pathMatch: PathMatchFn<Node> = defaultPathMatch,
 ): Node | undefined {
   function _searchNode(node: Node, keyPath: string[], accumPath: string[]): Node | undefined {
     if (keyPath.length === 0) return node;
@@ -35,14 +38,14 @@ export function treeFindPath<Node extends KeyedNode>(
 }
 
 type ReducerResult<D> = {
-  [index: string]: ReducerResult<D> | KeyedNode<D>[];
-  result: KeyedNode<D>[];
+  [index: string]: ReducerResult<D> | FileTreeNode<D>[];
+  result: FileTreeNode<D>[];
 }
 /**
  * Takes a list of files with full paths and returns a tree of path segments.
  */
-export function fileListToTree<D extends { path: string; name?: string }>(files: D[]): KeyedNode<D>[] {
-  const result: KeyedNode<D>[] = [];
+export function fileListToTree<D extends { path: string; name?: string }>(files: D[]): FileTreeNode<D>[] {
+  const result: FileTreeNode<D>[] = [];
   const level: ReducerResult<D> = { result };
   files.forEach(file => {
     let path = file.path;
@@ -51,7 +54,7 @@ export function fileListToTree<D extends { path: string; name?: string }>(files:
     path.split('/').slice(1).reduce((r, key) => {
       if (!r[key]) {
         r[key] = { result: [] };
-        const data: KeyedNode<D> = { key, children: (r[key] as ReducerResult<D>).result };
+        const data: FileTreeNode<D> = { key, children: (r[key] as ReducerResult<D>).result };
         if (file.name === key || basename(file.path) === key) {
           data.data = file;
         }
@@ -63,15 +66,15 @@ export function fileListToTree<D extends { path: string; name?: string }>(files:
   return result;
 }
 
-export class FileTree<D> extends Tree<KeyedNode<D>> {
-  constructor(tree: KeyedNode<D>) {
+export class FileTree<D> extends Tree<FileTreeNode<D>> {
+  constructor(tree: FileTreeNode<D>) {
     super(tree);
     // FileTrees need to have a single root node
     if (tree.key !== 'ROOT') {
       this.root = { key: 'ROOT', children: [tree] };
     }
   }
-  findPath(path: string | string[]): KeyedNode<D> | undefined {
+  findPath(path: string | string[]): FileTreeNode<D> | undefined {
     return treeFindPath(
       this.root,
       Array.isArray(path) ? path : splitPath(path),

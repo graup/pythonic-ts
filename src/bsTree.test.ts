@@ -1,7 +1,7 @@
 import dedent from 'dedent';
 
-import { BinarySearchTree, treeInsert } from './bst';
-import { prettyPrint } from './keyed-node';
+import { BinarySearchTree, treeInsert } from './bsTree';
+import { prettyPrint } from './compose/has-key';
 
 describe('BinarySearchTree', () => {
   it('should find', () => {
