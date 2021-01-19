@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   transform: {'^.+\\.ts?$': 'ts-jest'},
   testEnvironment: 'node',
   testRegex: '/src/.*\\.(test|spec)?\\.(ts|tsx)$',

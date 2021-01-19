@@ -19,15 +19,6 @@ jobs:
     - uses: actions/setup-node@v2
       with:
         node-version: '14'
-    - name: yarn install
-      uses: borales/actions-yarn@v2.0.0
-      with:
-        cmd: install
-    - name: yarn lint
-      uses: borales/actions-yarn@v2.0.0
-      with:
-        cmd: lint --quiet
-    - name: yarn test
-      uses: borales/actions-yarn@v2.0.0
-      with:
-        cmd: test
+    - run: yarn install
+    - run: lint --quiet
+    - run: yarn test
