@@ -20,5 +20,5 @@ jobs:
       with:
         node-version: '14'
     - run: yarn install
-    - run: lint --quiet
+    - run: yarn lint --quiet
     - run: yarn test
