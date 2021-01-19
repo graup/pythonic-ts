@@ -1,7 +1,7 @@
 import dedent from 'dedent';
 
 import { BinarySearchTree, treeInsert } from './bsTree';
-import { prettyPrint } from './compose/has-key';
+import { prettyPrintKeys } from './compose/has-key';
 
 describe('BinarySearchTree', () => {
   it('should find', () => {
@@ -49,7 +49,7 @@ describe('BinarySearchTree', () => {
             ↳ ()
             ↳ 8
         ↳ ()`;
-    expect(prettyPrint(tree, true)).toBe(printedTree);
+    expect(prettyPrintKeys(tree, { printNullNodes: true })).toBe(printedTree);
   });
   it('should overwrite', () => {
     const tree = new BinarySearchTree({ key: 2, children: [null, null] });

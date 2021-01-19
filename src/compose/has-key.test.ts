@@ -1,7 +1,7 @@
 import dedent from 'dedent';
 
 import { MaybeHasChildren, treeIterator } from './has-children';
-import { HasKey, prettyPrint } from './has-key';
+import { HasKey, prettyPrintKeys } from './has-key';
 
 type Node = HasKey<number> & MaybeHasChildren<Node>;
 
@@ -26,11 +26,11 @@ describe('KeyedNode', () => {
         null,
       ],
     };
-    expect(prettyPrint(tree)).toBe(dedent`
+    expect(prettyPrintKeys(tree)).toBe(dedent`
       ↳ 1
         ↳ 2
         ↳ 3`);
-    expect(prettyPrint(tree, true)).toBe(dedent`
+    expect(prettyPrintKeys(tree, { printNullNodes: true })).toBe(dedent`
       ↳ 1
         ↳ 2
         ↳ 3
