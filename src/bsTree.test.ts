@@ -1,4 +1,4 @@
-import dedent from 'dedent';
+import dedent from 'ts-dedent';
 
 import { BinarySearchTree, treeInsert } from './bsTree';
 import { prettyPrintKeys } from './compose/has-key';

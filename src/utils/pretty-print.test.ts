@@ -1,4 +1,4 @@
-import dedent from 'dedent';
+import dedent from 'ts-dedent';
 
 import { MaybeHasChildren } from '../compose/has-children';
 import { prettyPrint } from './pretty-print';

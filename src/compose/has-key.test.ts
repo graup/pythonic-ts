@@ -1,4 +1,4 @@
-import dedent from 'dedent';
+import dedent from 'ts-dedent';
 
 import { MaybeHasChildren, treeIterator } from './has-children';
 import { HasKey, prettyPrintKeys } from './has-key';
