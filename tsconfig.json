@@ -7,9 +7,12 @@
     "module": "esnext",
     "esModuleInterop": true,
     "moduleResolution": "node",
-    "noEmit": true,
     "downlevelIteration": true,
     "rootDir": "src",
+    "emitDeclarationOnly": true,
+    "declaration": true,
+    "declarationDir": "dist",
+    "isolatedModules": true
   },
   "include": ["."]
 }
