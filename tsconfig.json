@@ -8,7 +8,8 @@
     "esModuleInterop": true,
     "moduleResolution": "node",
     "noEmit": true,
-    "downlevelIteration": true
+    "downlevelIteration": true,
+    "rootDir": "src",
   },
   "include": ["."]
 }

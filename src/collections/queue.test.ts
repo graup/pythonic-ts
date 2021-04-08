@@ -2,7 +2,7 @@ import { Queue } from './queue';
 
 describe('Queue', () => {
   it('should construct empty', () => {
-    const queue = new Queue<number>();
+    const queue = new Queue();
     expect(queue.size).toBe(0);
     expect(queue.isEmpty).toBe(true);
   });
