@@ -17,7 +17,7 @@
     "build:docs": "typedoc"
   },
   "author": "Paul Grau <paul@graycoding.com>",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@babel/plugin-transform-runtime": "^7.9.0"
   },
