@@ -22,3 +22,4 @@ jobs:
     - run: yarn install
     - run: yarn lint --quiet
     - run: yarn test
+    - uses: codecov/codecov-action@v1
