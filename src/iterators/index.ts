@@ -1,3 +1,4 @@
+export * from './enumerate';
 export * from './lazyItemGetter';
 export * from './map';
 export * from './range';
