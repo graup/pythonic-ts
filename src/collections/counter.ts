@@ -44,7 +44,7 @@ export class Counter<T> extends Map<T, number> {
   /**
    * @returns list of `[object, count]` tuples sorted by descending count 
    */
-  sorted(): [object: T, count: number][] {
+  sorted(): [T, number][] {
     return Array.from(this.entries()).sort((a, b) => b[1] - a[1]);
   }
 
