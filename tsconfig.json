@@ -14,5 +14,9 @@
     "declarationDir": "dist",
     "isolatedModules": true
   },
-  "include": ["src"]
+  "include": ["src"],
+  "typedocOptions": {
+    "entryPoints": ["src/index.ts"],
+    "out": "docs"
+  }
 }

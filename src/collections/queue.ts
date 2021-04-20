@@ -1,3 +1,17 @@
+/**
+ * A super simple queue built on an array.
+ * The main advantage of using this is that `dequeue()` never returns `undefined`,
+ * allowing to write type-checked code like this:
+ * 
+ * ```typescript
+ * const queue = new Queue(1, 2, 3); // type: Queue<number>
+ * while (!queue.isEmpty()) {
+ *   const elem = queue.dequeue(); // type: number
+ * }
+ * ```
+ * 
+ * @typeParam T queue element
+ */
 export class Queue<T> {
   private queue: T[];
   
@@ -18,6 +32,6 @@ export class Queue<T> {
     return this.queue.length;
   }
   get isEmpty(): boolean {
-    return this.size === 0;
+    return this.queue.length === 0;
   }
 }

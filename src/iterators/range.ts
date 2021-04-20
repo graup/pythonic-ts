@@ -23,12 +23,12 @@ function makeIterator(start: number, stop: number, step: number): IterableIterat
   return positiveRange(start, stop, step);
 }
 
-interface Range extends IterableIterator<number> {
+interface RangeIterator extends IterableIterator<number> {
   indexOf(value: number): number;
 }
 
-function annotate(iterator: IterableIterator<number>, start: number, stop: number, step: number): Range {
-  const range = iterator as Range;
+function annotate(iterator: IterableIterator<number>, start: number, stop: number, step: number): RangeIterator {
+  const range = iterator as RangeIterator;
   range.indexOf = function indexOf(value: number): number {
     if (value >= stop || value < start) return -1;
     const idx = value - start;
@@ -41,12 +41,12 @@ function annotate(iterator: IterableIterator<number>, start: number, stop: numbe
 /**
  * Returns an iterator of numbers and is commonly used for looping a specific number of times in for loops.
  * The API is the same as Python's range.
- * @param stop 
+ * @return iterable iterator over range
  */
-export function range(stop: number): Range;
-export function range(start: number, stop: number): Range;
-export function range(start: number, stop: number, step: number): Range;
-export function range(...args: number[]): Range {
+export function range(stop: number): RangeIterator;
+export function range(start: number, stop: number): RangeIterator;
+export function range(start: number, stop: number, step: number): RangeIterator;
+export function range(...args: number[]): RangeIterator {
   let stop = 0, start = 0, step = 1;
   if (args.length === 1) {
     [stop] = args;

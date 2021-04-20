@@ -1,6 +1,6 @@
 /**
- * Takes {n} items from iterator by calling next() n times and returns
- * array of items. Stops iterating when iterator is exhausted.
+ * Takes `n` items from iterator by calling `next()` `n` times and returns
+ * an array of items. Stops iterating when iterator is exhausted.
  */
 export function take<T>(generator: IterableIterator<T>, n: number): T[] {
   const results: T[] = [];
