@@ -5,3 +5,7 @@
 
 This library includes a number of utility functions, in particular related to iterators and collections.
 The API is modeled after similar functions found in the Python standard library.
+
+[Documentation](https://graup.github.io/pythonic-ts/modules.html)
+
+    yarn add pythonic-ts
