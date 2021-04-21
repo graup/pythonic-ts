@@ -8,7 +8,7 @@ describe('defaultdict', () => {
     expect(dict.a).toStrictEqual([1]);
   });
   it('should work with numbers', () => {
-    const dict = defaultdict(() => 0);
+    const dict = defaultdict(Number);
     expect(dict.nonExistant).toStrictEqual(0);
     dict['a'] += 10;
     dict['a'] += 10;
