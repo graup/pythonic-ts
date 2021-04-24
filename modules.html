@@ -77,6 +77,7 @@
 								<li class="tsd-kind-function tsd-has-type-parameter"><a href="modules.html#keyby" class="tsd-kind-icon">key<wbr>By</a></li>
 								<li class="tsd-kind-function tsd-has-type-parameter"><a href="modules.html#lazyitemgetter" class="tsd-kind-icon">lazy<wbr>Item<wbr>Getter</a></li>
 								<li class="tsd-kind-function tsd-has-type-parameter"><a href="modules.html#mapiterator" class="tsd-kind-icon">map<wbr>Iterator</a></li>
+								<li class="tsd-kind-function tsd-has-type-parameter"><a href="modules.html#product" class="tsd-kind-icon">product</a></li>
 								<li class="tsd-kind-function"><a href="modules.html#range" class="tsd-kind-icon">range</a></li>
 								<li class="tsd-kind-function tsd-has-type-parameter"><a href="modules.html#repeat" class="tsd-kind-icon">repeat</a></li>
 								<li class="tsd-kind-function tsd-has-type-parameter"><a href="modules.html#take" class="tsd-kind-icon">take</a></li>
@@ -98,7 +99,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/graup/pythonic-ts/blob/da8c089/src/collections/defaultdict.ts#L4">src/collections/defaultdict.ts:4</a></li>
+									<li>Defined in <a href="https://github.com/graup/pythonic-ts/blob/aaff130/src/collections/defaultdict.ts#L4">src/collections/defaultdict.ts:4</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -141,13 +142,13 @@
 					<a name="enumerate" class="tsd-anchor"></a>
 					<h3>enumerate</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">enumerate&lt;T&gt;<span class="tsd-signature-symbol">(</span>iterator<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">IterableIterator</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IterableIterator</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">enumerate&lt;T&gt;<span class="tsd-signature-symbol">(</span>iterator<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Iterable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Iterable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/graup/pythonic-ts/blob/da8c089/src/iterators/enumerate.ts#L8">src/iterators/enumerate.ts:8</a></li>
+									<li>Defined in <a href="https://github.com/graup/pythonic-ts/blob/aaff130/src/iterators/enumerate.ts#L8">src/iterators/enumerate.ts:8</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -165,10 +166,10 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>iterator: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">IterableIterator</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5>iterator: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Iterable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">IterableIterator</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Iterable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></h4>
 							<p>iterator of [index, item] tuples</p>
 						</li>
 					</ul>
@@ -183,7 +184,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/graup/pythonic-ts/blob/da8c089/src/collections/transforms.ts#L45">src/collections/transforms.ts:45</a></li>
+									<li>Defined in <a href="https://github.com/graup/pythonic-ts/blob/aaff130/src/collections/transforms.ts#L45">src/collections/transforms.ts:45</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -255,7 +256,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/graup/pythonic-ts/blob/da8c089/src/collections/transforms.ts#L21">src/collections/transforms.ts:21</a></li>
+									<li>Defined in <a href="https://github.com/graup/pythonic-ts/blob/aaff130/src/collections/transforms.ts#L21">src/collections/transforms.ts:21</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -330,7 +331,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/graup/pythonic-ts/blob/da8c089/src/iterators/lazyItemGetter.ts#L7">src/iterators/lazyItemGetter.ts:7</a></li>
+									<li>Defined in <a href="https://github.com/graup/pythonic-ts/blob/aaff130/src/iterators/lazyItemGetter.ts#L7">src/iterators/lazyItemGetter.ts:7</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -377,13 +378,13 @@
 					<a name="mapiterator" class="tsd-anchor"></a>
 					<h3>map<wbr>Iterator</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">map<wbr>Iterator&lt;T, T2&gt;<span class="tsd-signature-symbol">(</span>iterator<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IterableIterator</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span>, callbackFn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>val<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, idx<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">T2</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IterableIterator</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T2</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">map<wbr>Iterator&lt;T, T2&gt;<span class="tsd-signature-symbol">(</span>iterator<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Iterable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span>, callbackFn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>val<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, idx<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">T2</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Iterable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T2</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/graup/pythonic-ts/blob/da8c089/src/iterators/map.ts#L1">src/iterators/map.ts:1</a></li>
+									<li>Defined in <a href="https://github.com/graup/pythonic-ts/blob/aaff130/src/iterators/map.ts#L1">src/iterators/map.ts:1</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -398,7 +399,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>iterator: <span class="tsd-signature-type">IterableIterator</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5>iterator: <span class="tsd-signature-type">Iterable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 								<li>
 									<h5>callbackFn: <span class="tsd-signature-symbol">(</span>val<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, idx<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">T2</span></h5>
@@ -425,7 +426,46 @@
 									</ul>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">IterableIterator</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T2</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Iterable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T2</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter">
+					<a name="product" class="tsd-anchor"></a>
+					<h3>product</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">product&lt;T&gt;<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>iterables<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Iterableify</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Generator</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/graup/pythonic-ts/blob/aaff130/src/iterators/product.ts#L14">src/iterators/product.ts:14</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Cartesian product of input iterables.
+									Roughly equivalent to nested for-loops in a generator expression.</p>
+								</div>
+								<pre><code class="language-typescript"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">z</span><span style="color: #000000"> = </span><span style="color: #795E26">product</span><span style="color: #000000">([</span><span style="color: #098658">1</span><span style="color: #000000">, </span><span style="color: #098658">2</span><span style="color: #000000">, </span><span style="color: #098658">3</span><span style="color: #000000">], [</span><span style="color: #0000FF">true</span><span style="color: #000000">, </span><span style="color: #0000FF">false</span><span style="color: #000000">]);</span>
+<span style="color: #267F99">Array</span><span style="color: #000000">.</span><span style="color: #795E26">from</span><span style="color: #000000">(</span><span style="color: #001080">z</span><span style="color: #000000">)  </span><span style="color: #008000">//=&gt; [[1, true], [2, true], [3, true], [1, false], [2, false], [3, false]]</span>
+</code></pre>
+								<p>Source: based on <a href="https://gist.github.com/cybercase/db7dde901d7070c98c48#gistcomment-3033459">https://gist.github.com/cybercase/db7dde901d7070c98c48#gistcomment-3033459</a></p>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">[]</span></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>iterables: <span class="tsd-signature-type">Iterableify</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Generator</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -441,7 +481,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/graup/pythonic-ts/blob/da8c089/src/iterators/range.ts#L46">src/iterators/range.ts:46</a></li>
+									<li>Defined in <a href="https://github.com/graup/pythonic-ts/blob/aaff130/src/iterators/range.ts#L46">src/iterators/range.ts:46</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -462,7 +502,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/graup/pythonic-ts/blob/da8c089/src/iterators/range.ts#L47">src/iterators/range.ts:47</a></li>
+									<li>Defined in <a href="https://github.com/graup/pythonic-ts/blob/aaff130/src/iterators/range.ts#L47">src/iterators/range.ts:47</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -479,7 +519,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/graup/pythonic-ts/blob/da8c089/src/iterators/range.ts#L48">src/iterators/range.ts:48</a></li>
+									<li>Defined in <a href="https://github.com/graup/pythonic-ts/blob/aaff130/src/iterators/range.ts#L48">src/iterators/range.ts:48</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -508,7 +548,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/graup/pythonic-ts/blob/da8c089/src/iterators/repeat.ts#L5">src/iterators/repeat.ts:5</a></li>
+									<li>Defined in <a href="https://github.com/graup/pythonic-ts/blob/aaff130/src/iterators/repeat.ts#L5">src/iterators/repeat.ts:5</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -546,7 +586,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/graup/pythonic-ts/blob/da8c089/src/iterators/take.ts#L5">src/iterators/take.ts:5</a></li>
+									<li>Defined in <a href="https://github.com/graup/pythonic-ts/blob/aaff130/src/iterators/take.ts#L5">src/iterators/take.ts:5</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -584,7 +624,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/graup/pythonic-ts/blob/da8c089/src/iterators/zip.ts#L12">src/iterators/zip.ts:12</a></li>
+									<li>Defined in <a href="https://github.com/graup/pythonic-ts/blob/aaff130/src/iterators/zip.ts#L12">src/iterators/zip.ts:12</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -647,6 +687,9 @@
 					</li>
 					<li class=" tsd-kind-function tsd-has-type-parameter">
 						<a href="modules.html#mapiterator" class="tsd-kind-icon">map<wbr>Iterator</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="modules.html#product" class="tsd-kind-icon">product</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="modules.html#range" class="tsd-kind-icon">range</a>
