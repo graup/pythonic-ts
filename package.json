@@ -1,6 +1,6 @@
 {
   "name": "pythonic-ts",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A collection of Python-style utility functions for iterators and collections",
   "type": "module",
   "module": "dist/index.js",
