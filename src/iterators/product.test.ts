@@ -1,5 +1,3 @@
-
-
 import { product } from './product';
 
 describe('mapIterator', () => {
