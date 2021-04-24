@@ -1,6 +1,7 @@
 export * from './enumerate';
 export * from './lazyItemGetter';
 export * from './map';
+export * from './product';
 export * from './range';
 export * from './repeat';
 export * from './take';

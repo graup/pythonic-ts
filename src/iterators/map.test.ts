@@ -10,4 +10,8 @@ describe('mapIterator', () => {
     const mapped = mapIterator(generator(), (val) => val * 2);
     expect(Array.from(mapped)).toStrictEqual([2, 4, 6, 8, 10]);
   });
+  it('should work with iterables', () => {
+    const mapped = mapIterator([1, 2], (val) => val * 2);
+    expect(Array.from(mapped)).toStrictEqual([2, 4]);
+  });
 });
